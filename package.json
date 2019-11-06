@@ -1,0 +1,24 @@
+{
+  "name": "bundle-test-wasm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "test-lib": "file:test-lib"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "scripts": {
+    "preinstall": "cd test-lib && npm install",
+    "preserve": "cd test-lib && npm run build",
+    "serve": "webpack-dev-server",
+    "prebuild": "cd test-lib && npm run build",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC"
+}
